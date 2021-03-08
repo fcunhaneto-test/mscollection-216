@@ -6,3 +6,54 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+.text-orange {
+    color: #FF9800;
+}
+
+.frontend-footer {
+    background-color: #0d47a1;
+}
+
+ul > li {
+    list-style-type: none;
+}
+
+.navbar-frontend {
+    background-color: #0d47a1;
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+table {
+    border-bottom: 1px solid #000000;
+}
+
+table > tbody > tr > td {
+    border-bottom: 1px solid #000000;
+}
+
+.table-link {
+    color: #1565C0;
+    font-weight: bold;
+}
+
+.table-link:hover {
+    color: #0d47a1;
+}
+
+table.frontend-table {
+    font-size: 1rem;
+}
+
+.frontend-table thead {
+    background-color: #0d47a1;
+    color: #ffffff;
+}

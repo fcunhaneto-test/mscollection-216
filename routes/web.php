@@ -1,22 +1,35 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use App\Models\Qualifiers\Media;
 
 Route::get('/', function () {
-    return view('welcome');
+    $media = new Media();
+    $slug = $media->streams()->first()->slug;
+
+    return redirect('/filmes/' . $slug);
+});
+
+Route::get('/filmes/{channel}', function ($channel) {
+    $table = 'movies';
+    $header = 'Filmes';
+
+    $c_media = new Media();
+    $media = $c_media->streams();
+    $subheader = $c_media->where('slug', $channel)->first()->name;
+
+    return view('titles', compact('table', 'header', 'subheader', 'media'));
+});
+
+Route::get('/series/{channel}', function ($channel) {
+    $table = 'series';
+    $header = 'Séries';
+
+    $c_media = new Media();
+    $media = $c_media->streams();
+    $subheader = $c_media->where('slug', $channel)->first()->name;
+
+    return view('titles', compact('table', 'header', 'subheader', 'media'));
 });
 
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
