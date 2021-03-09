@@ -53,6 +53,10 @@ table.frontend-table {
     font-size: 1rem;
 }
 
+ul.table-rating > li {
+    display: inline;
+}
+
 .frontend-table thead {
     background-color: #0d47a1;
     color: #ffffff;

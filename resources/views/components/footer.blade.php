@@ -1,4 +1,4 @@
-<footer class="frontend-footer fixed-bottom pt-3 pb-3">
+<footer class="frontend-footer mt-5 pt-3 pb-3">
     <div class="container">
         <h5 class="text-white">Classificação:</h5>
         <ul class="pl-0">

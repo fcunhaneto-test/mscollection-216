@@ -38,7 +38,7 @@ export default {
     },
     methods: {
         toPage(title) {
-
+            this.$emit('showTitle', title)
         }
     }
 }

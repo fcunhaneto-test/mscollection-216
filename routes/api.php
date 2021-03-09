@@ -14,6 +14,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::prefix('movies')->group(function() {
     Route::get('/titles-start/{channel}/{pp}', 'MovieController@titlesStart');
     Route::get('/titles-page/{channel}/{page}/{pp}', 'MovieController@titlesPage');
+
+    Route::get('/cast/{id}', 'MovieController@cast');
+    Route::get('/producers/{id}', 'MovieController@producers');
 });
 
 Route::prefix('series')->group(function() {
